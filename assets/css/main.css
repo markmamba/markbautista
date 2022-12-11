@@ -2613,20 +2613,23 @@ input, select, textarea {
 				width: 100%;
 			}
 
+
+			/* About Me */
+
 			.bio-statement-and-portrait {
 				display: flex;
 			}
 
-
-			/* About Me */
-
 			.personal-statement {
 				float: left;
+				font-size: 18px;
+				width: 70%;
 			}
 
 			.portrait-container {
 				float: right;
-				padding-left: 80px;
+				padding-left: 50px;
+				width: 30%;
 			}
 
 			.portrait-image {
@@ -2634,10 +2637,104 @@ input, select, textarea {
     		right: 0px;
     		max-height: 212px;
     		max-width: 212px;
+				min-width: 100px;
+				min-height:100px;
     		border: 4px solid #fff;
     		border-radius: 24px;
     		box-shadow: 11px 11px 48px 0 rgb(0 0 0 / 12%);
 			}
+
+			/* Bio Heading title media */
+
+			@media screen and (max-width: 479px){
+				.bio-heading-title {
+						width: 75%;
+				    margin-top: 0px;
+				    margin-bottom: 16px;
+				    font-size: 40px;
+				    line-height: 48px;
+				    text-align: left;
+				}
+			}
+
+
+
+			/* Bio statement and portrait media */
+			@media screen and (max-width: 479px){
+				.bio-statement-and-portrait {
+				    margin-top: 60px;
+				    -ms-grid-columns: 2fr;
+				    grid-template-columns: 2fr;
+				    -ms-grid-rows: auto;
+				    grid-template-rows: auto;
+				}
+			}
+
+			@media screen and (max-width: 767px){
+				.bio-statement-and-portrait {
+				    -ms-grid-columns: 2fr 1fr;
+				    grid-template-columns: 2fr 1fr;
+				}
+			}
+
+			/* Personal Statement media */
+
+			@media screen and (max-width: 479px){
+				.personal-statement {
+				    width: 100%;
+				}
+			}
+
+
+			/*Image Container size*/
+			@media screen and (max-width: 479px){
+				.portrait-container {
+				    position: absolute;
+				    overflow: visible;
+				    width: 100%;
+				    height: 36vw;
+				    margin-top: -43vw;
+				    background-image: url(https://uploads-ssl.webflow.com/5e25202…/5eb79ee…_Side%20Squiggle%402x.png);
+				    background-position: 0% 100%;
+				    background-size: 96px 16px;
+				}
+			}
+
+			@media screen and (max-width: 767px){
+				.portrait-container {
+				    max-height: 144px;
+				    background-image: none;
+				}
+			}
+
+			@media screen and (max-width: 991px){
+				.portrait-container {
+				    background-position: 20px 50%;
+				}
+			}
+
+			/* Image about me media*/
+
+			@media screen and (max-width: 479px) {
+				.portrait-image {
+	    		width: 28vw;
+	    		height: 28vw;
+	  			border-radius: 100px;
+	    		box-shadow: 11px 11px 48px 0 rgb(0 0 0 / 18%);
+					position: absolute;
+    			right: 50px;
+					top: 45px;
+				}
+			}
+
+			@media screen and (max-width: 767px){
+				.portrait-image {
+				    max-height: 144px;
+				    max-width: 144px;
+				}
+			}
+
+
 
 /* List */
 
